@@ -1,0 +1,57 @@
+file:
+  format: tsv
+  header: false
+  name: BLXV01.full_table.tsv.gz
+  needs:
+    - ATTR_busco.types.yaml
+    - ATTR_merian.types.yaml
+    - FILE_BLXV01.window_stats.types.yaml
+  source: BlobToolKit
+  source_url: https://blobtoolkit.genomehubs.org/view/dataset/BLXV01
+analysis:
+  analysis_id: busco5-endopterygota_odb10-GCA_014132275.1
+  assembly_id: GCA_014132275.1
+  taxon_id: "63990"
+  description: BUSCO v5 analysis of GCA_014132275.1 using endopterygota_odb10 lineage
+  name: BUSCO_endopterygota_odb10
+  title: BUSCO v5 GCA_014132275.1 endopterygota_odb10
+features:
+  assembly_id: GCA_014132275.1
+  feature_id:
+    index: 2
+    template: "{}:{start}-{end}"
+  primary_type: busco-gene
+taxonomy:
+  taxon_id: "63990"
+attributes:
+  sequence_id:
+    index: 2
+  feature_type:
+    default:
+      - busco-gene
+      - gene
+  start:
+    index: 3
+  end:
+    index: 4
+  strand:
+    index: 5
+    translate:
+      "-": -1
+      "+": 1
+  length:
+    index: 7
+  midpoint:
+    index: 3
+    function: "{length} / 2 + {}"
+  midpoint_proportion:
+    index: 2
+    function: "{midpoint} / {.length}"
+  busco_gene:
+    index: 0
+  busco_status:
+    index: 1
+  busco_score:
+    index: 6
+  analysis_name:
+    default: BUSCO_endopterygota_odb10

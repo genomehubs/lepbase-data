@@ -1,0 +1,16 @@
+common:
+  hub:
+    name: lepbase
+    path: ~/projects/genomehubs/lepbase-resources
+    version: 2022.10.05
+  es:
+    path: ~/genomehubs/demo_resources/es
+  taxonomy:
+    path: ~/projects/genomehubs/lepbase-resources/taxdump
+    url: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
+    file:
+      - names.dmp
+      - nodes.dmp
+fill: {}
+index: {}
+init: {}

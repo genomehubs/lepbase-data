@@ -1,0 +1,51 @@
+file:
+  format: tsv
+  header: false
+  name: ASM1460749v2.window_stats.tsv.gz
+  needs:
+    - ATTR_feature.types.yaml
+    - ATTR_window_stats.types.yaml
+  source: BlobToolKit
+  source_url: https://blobtoolkit.genomehubs.org/view/dataset/ASM1460749v2
+analysis:
+  analysis_id: assembly-GCA_014607495.2
+  assembly_id: GCA_014607495.2
+  taxon_id: "252295"
+  description: Public assembly GCA_014607495.2
+  name: Assembly
+  title: Public assembly GCA_014607495.2
+features:
+  assembly_id: GCA_014607495.2
+  feature_id:
+    header: sequence
+  primary_type: chromosome
+taxonomy:
+  taxon_id: "252295"
+attributes:
+  sequence_id:
+    header: sequence
+  feature_type:
+    default:
+      - chromosome
+      - toplevel
+      - sequence
+  start:
+    header: start
+    function: "{} + 1"
+  end:
+    header: end
+  strand: 1
+  length:
+    header: end
+  seq_proportion:
+    header: end
+    function: "{} / 399040036"
+  midpoint:
+    header: end
+    function: "{length} / 2"
+  gc:
+    header: gc
+  masked:
+    header: masked
+  busco_count:
+    header: lepidoptera_odb10_count

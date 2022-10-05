@@ -1,0 +1,57 @@
+file:
+  format: tsv
+  header: false
+  name: ASM1460749v2.full_table.tsv.gz
+  needs:
+    - ATTR_busco.types.yaml
+    - ATTR_merian.types.yaml
+    - FILE_ASM1460749v2.window_stats.types.yaml
+  source: BlobToolKit
+  source_url: https://blobtoolkit.genomehubs.org/view/dataset/ASM1460749v2
+analysis:
+  analysis_id: busco5-eukaryota_odb10-GCA_014607495.2
+  assembly_id: GCA_014607495.2
+  taxon_id: "252295"
+  description: BUSCO v5 analysis of GCA_014607495.2 using eukaryota_odb10 lineage
+  name: BUSCO_eukaryota_odb10
+  title: BUSCO v5 GCA_014607495.2 eukaryota_odb10
+features:
+  assembly_id: GCA_014607495.2
+  feature_id:
+    index: 2
+    template: "{}:{start}-{end}"
+  primary_type: busco-gene
+taxonomy:
+  taxon_id: "252295"
+attributes:
+  sequence_id:
+    index: 2
+  feature_type:
+    default:
+      - busco-gene
+      - gene
+  start:
+    index: 3
+  end:
+    index: 4
+  strand:
+    index: 5
+    translate:
+      "-": -1
+      "+": 1
+  length:
+    index: 7
+  midpoint:
+    index: 3
+    function: "{length} / 2 + {}"
+  midpoint_proportion:
+    index: 2
+    function: "{midpoint} / {.length}"
+  busco_gene:
+    index: 0
+  busco_status:
+    index: 1
+  busco_score:
+    index: 6
+  analysis_name:
+    default: BUSCO_eukaryota_odb10
