@@ -1,6 +1,6 @@
 file:
   format: tsv
-  header: false
+  header: true
   name: ASM1460749v2.window_stats.tsv.gz
   needs:
     - ATTR_feature.types.yaml

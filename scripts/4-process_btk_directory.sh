@@ -17,9 +17,11 @@ for DIR in $(ls -d ${BTK_DIR}/*/); do
   LIBRARY=$(echo "$LIBRARIES" | head -n 1)
 
 # write window_stats YAML
+
+cp "${DIR}/${BTK_ID}.window_stats.tsv.gz" "sources/features/${BTK_ID}.window_stats.tsv.gz"
 echo "file:
   format: tsv
-  header: false
+  header: true
   name: ${BTK_ID}.window_stats.tsv.gz
   needs:
     - ATTR_feature.types.yaml
@@ -75,6 +77,9 @@ if [ ! -z "$LIBRARY" ]; then
 fi
 # write busco YAMLs
 while read LINEAGE; do
+
+tar xOf "${DIR}/${BTK_ID}.busco.${LINEAGE}.tar" "${BTK_ID}.busco.${LINEAGE}/full_table.tsv.gz" > "sources/features/${BTK_ID}.${LINEAGE}.full_table.tsv.gz"
+
 echo "file:
   format: tsv
   header: false
@@ -137,7 +142,7 @@ if [ "$LINEAGE" == "$TOP_LINEAGE" ]; then
     index: 0" >> "sources/features/FILE_${BTK_ID}.busco.${LINEAGE}.types.yaml"
 fi
 done <<< "${LINEAGES}"
-if [ "$ID" == "CADCXM01" ]; then
+if [ "$BTK_ID" == "CADCXM01" ]; then
   break
 fi
 done

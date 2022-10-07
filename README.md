@@ -1,0 +1,9 @@
+# lepbase-data
+
+Contains files for indexing features in GenomeHubs
+
+example [plot link](<http://localhost:8880/search?result=feature&query=assembly_id%3DGCA_902806685.1%2CGCA_014607495.2%20AND%20collate%28assembly_id%2Cbusco_gene%29%20AND%20merian_unit&taxonomy=ncbi&includeEstimates=false&summaryValues=count&size=10&offset=10&fields=busco_gene%2Csequence_id%2Cstart%2Cend%2Cstrand%2Cfeature_type&names=&ranks=&sortBy=busco_gene&sortOrder=asc&report=oxford&cat=merian_unit%5B31%5D&pointSize=10#assembly_id=GCA_902806685.1,GCA_014607495.2%20AND%20collate(assembly_id,busco_gene)%20AND%20merian_unit>)
+
+and [plot link](http://localhost:8880/search?result=feature&query=assembly_id%3DGCA_902806685.1%2CGCA_014607495.2%20AND%20collate%28assembly_id%2Cbusco_gene%29%20AND%20merian_unit&taxonomy=ncbi&includeEstimates=false&summaryValues=count&size=10&offset=10&fields=busco_gene%2Csequence_id%2Cstart%2Cend%2Cstrand%2Cfeature_type&names=&ranks=&sortBy=busco_gene&sortOrder=asc&report=oxford&cat=merian_unit%5B31%5D&pointSize=10#assembly_id=GCA_902806685.1,GCA_014607495.2%20AND%20collate%28assembly_id%2Cbusco_gene%29%20AND%20merian_unit)
+
+with [ordered cats](http://localhost:8880/search?result=feature&query=assembly_id%3DGCA_902806685.1%2CGCA_014607495.2%20AND%20collate%28assembly_id%2Cbusco_gene%29%20AND%20merian_unit&taxonomy=ncbi&includeEstimates=false&summaryValues=count&size=10&offset=10&fields=busco_gene%2Csequence_id%2Cstart%2Cend%2Cstrand%2Cfeature_type&names=&ranks=&sortBy=busco_gene&sortOrder=asc&report=oxford&cat=merian_unit%5B31%5D%3Dm1%2Cm2%2Cm3%2Cm4%2Cm5%2Cm6%2Cm7%2Cm8%2Cm9%2Cm10%2Cm11%2Cm12%2Cm13%2Cm14%2Cm15%2Cm16%2Cm17%2Cm18%2Cm19%2Cm20%2Cm21%2Cm22%2Cm23%2Cm24%2Cm25%2Cm26%2Cm27%2Cm28%2Cm29%2Cm30%2Cmz&pointSize=15&plotRatio=auto&ratio=0.25#assembly_id=GCA_902806685.1,GCA_014607495.2%20AND%20collate%28assembly_id%2Cbusco_gene%29%20AND%20merian_unit)

@@ -1,7 +1,7 @@
 file:
   format: tsv
   header: false
-  name: CADCXM01.full_table.tsv.gz
+  name: CADCXM01.lepidoptera_odb10.full_table.tsv.gz
   needs:
     - ATTR_busco.types.yaml
     - ATTR_merian.types.yaml
