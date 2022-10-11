@@ -19,13 +19,19 @@ features:
   assembly_id: GCA_902806685.1
   feature_id:
     index: 2
-    template: "{}:{start}-{end}"
+    separator:
+      - ":"
+    limit: 1
+    template: "{}:{start}-{end}:{busco_gene}"
   primary_type: busco-gene
 taxonomy:
   taxon_id: "2795564"
 attributes:
   sequence_id:
     index: 2
+    separator:
+      - ":"
+    limit: 1
   feature_type:
     default:
       - busco-gene
@@ -46,6 +52,9 @@ attributes:
     function: "{length} / 2 + {}"
   midpoint_proportion:
     index: 2
+    separator:
+      - ":"
+    limit: 1
     function: "{midpoint} / {.length}"
   busco_gene:
     index: 0

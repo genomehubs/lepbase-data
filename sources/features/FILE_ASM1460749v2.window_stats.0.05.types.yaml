@@ -1,0 +1,56 @@
+file:
+  format: tsv
+  header: true
+  name: ASM1460749v2.window_stats.0.05.tsv.gz
+  needs:
+    - ATTR_feature.types.yaml
+    - ATTR_window_stats.types.yaml
+    - FILE_ASM1460749v2.window_stats.types.yaml
+  source: BlobToolKit
+  source_url: https://blobtoolkit.genomehubs.org/view/dataset/ASM1460749v2
+analysis:
+  analysis_id: assembly-GCA_014607495.2-0.05
+  assembly_id: GCA_014607495.2
+  taxon_id: "252295"
+  description: Public assembly GCA_014607495.2 0.05 windows
+  name: Assembly-0.05
+  title: Public assembly GCA_014607495.2 0.05
+features:
+  assembly_id: GCA_014607495.2
+  feature_id:
+    header: sequence
+    template: "{}:{start}-{end}:window"
+  primary_type: window-0.05
+taxonomy:
+  taxon_id: "252295"
+attributes:
+  sequence_id:
+    header: sequence
+  feature_type:
+    default:
+      - window-0.05
+      - window
+  start:
+    header: start
+    function: "{} + 1"
+  end:
+    header: end
+  strand: 1
+  length:
+    header: start
+    function: "{end} - {}"
+  seq_proportion:
+    header: sequence
+    function: "{length} / {.length}"
+  midpoint:
+    header: end
+    function: "{length} / 2 + {start}"
+  midpoint_proportion:
+    header: sequence
+    function: "{midpoint} / {.length}"
+  gc:
+    header: gc
+  masked:
+    header: masked
+  busco_count:
+    header: lepidoptera_odb10_count

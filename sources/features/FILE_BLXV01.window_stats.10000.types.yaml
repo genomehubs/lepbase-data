@@ -1,0 +1,56 @@
+file:
+  format: tsv
+  header: true
+  name: BLXV01.window_stats.10000.tsv.gz
+  needs:
+    - ATTR_feature.types.yaml
+    - ATTR_window_stats.types.yaml
+    - FILE_BLXV01.window_stats.types.yaml
+  source: BlobToolKit
+  source_url: https://blobtoolkit.genomehubs.org/view/dataset/BLXV01
+analysis:
+  analysis_id: assembly-GCA_014132275.1-10000
+  assembly_id: GCA_014132275.1
+  taxon_id: "63990"
+  description: Public assembly GCA_014132275.1 10000 windows
+  name: Assembly-10000
+  title: Public assembly GCA_014132275.1 10000
+features:
+  assembly_id: GCA_014132275.1
+  feature_id:
+    header: sequence
+    template: "{}:{start}-{end}:window"
+  primary_type: window-10000
+taxonomy:
+  taxon_id: "63990"
+attributes:
+  sequence_id:
+    header: sequence
+  feature_type:
+    default:
+      - window-10000
+      - window
+  start:
+    header: start
+    function: "{} + 1"
+  end:
+    header: end
+  strand: 1
+  length:
+    header: start
+    function: "{end} - {}"
+  seq_proportion:
+    header: sequence
+    function: "{length} / {.length}"
+  midpoint:
+    header: end
+    function: "{length} / 2 + {start}"
+  midpoint_proportion:
+    header: sequence
+    function: "{midpoint} / {.length}"
+  gc:
+    header: gc
+  masked:
+    header: masked
+  busco_count:
+    header: lepidoptera_odb10_count

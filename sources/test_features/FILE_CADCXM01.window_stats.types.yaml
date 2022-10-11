@@ -1,0 +1,54 @@
+file:
+  format: tsv
+  header: true
+  name: CADCXM01.window_stats.tsv.gz
+  needs:
+    - ATTR_feature.types.yaml
+    - ATTR_window_stats.types.yaml
+  source: BlobToolKit
+  source_url: https://blobtoolkit.genomehubs.org/view/dataset/CADCXM01
+analysis:
+  analysis_id: assembly-GCA_902806685.1
+  assembly_id: GCA_902806685.1
+  taxon_id: "2795564"
+  description: Public assembly GCA_902806685.1
+  name: Assembly
+  title: Public assembly GCA_902806685.1
+features:
+  assembly_id: GCA_902806685.1
+  feature_id:
+    header: sequence
+  primary_type: chromosome
+taxonomy:
+  taxon_id: "2795564"
+attributes:
+  sequence_id:
+    header: sequence
+  feature_type:
+    default:
+      - chromosome
+      - toplevel
+      - sequence
+  start:
+    header: start
+    function: "{} + 1"
+  end:
+    header: end
+  strand: 1
+  length:
+    header: end
+  seq_proportion:
+    header: end
+    function: "{} / 408137179"
+  midpoint:
+    header: end
+    function: "{length} / 2"
+  gc:
+    header: gc
+  masked:
+    header: masked
+  busco_count:
+    header: lepidoptera_odb10_count
+  coverage:
+    header: ERR3316071_cov
+    function: "{} + 0.01"
